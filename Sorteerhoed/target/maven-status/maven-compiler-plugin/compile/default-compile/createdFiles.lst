@@ -6,4 +6,5 @@ org/example/Klant.class
 org/example/GebruikerInvoer.class
 org/example/AdresNederland.class
 org/example/Menu.class
+org/example/VerzendkostenBerekening.class
 org/example/VerzendEtiket.class

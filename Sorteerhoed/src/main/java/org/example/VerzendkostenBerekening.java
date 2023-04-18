@@ -7,11 +7,9 @@ public class VerzendkostenBerekening {
         if (bestemming == 2) {
             verzendkosten *= 1.5; // Verhoog de verzendkosten met 50% voor internationale zendingen
         }
-
         if (verzekering) {
             verzendkosten += 5; // Voeg 5 euro toe voor verzekering
         }
-
         if (spoedverzending) {
             verzendkosten *= 1.25; // Verhoog de verzendkosten met 25% voor spoedverzending
         }

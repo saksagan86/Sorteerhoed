@@ -9,8 +9,5 @@
         <module name="Sorteerhoed" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Sorteerhoed" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>

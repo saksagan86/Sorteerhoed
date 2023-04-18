@@ -12,6 +12,8 @@ public class Menu {
         this.gebruikerInvoer = gebruikerInvoer;
         this.klanten = new ArrayList<>();
     }
+    // De start-methode voert de hoofdlus voor het menu uit
+    // waardoor gebruikers verschillende opties kunnen kiezen en acties kunnen uitvoeren.
 
     public void start() {
         int menuOptie;
@@ -41,11 +43,10 @@ public class Menu {
             }
 
         } while (menuOptie != 5);
-        System.out.println("Bedankt voor het gebruiken van onze applicatie!");
+        System.out.println("Bedankt voor het gebruiken van Sorteerhoed");
     }
 
-
-
+    // De toonKlantenlijst-methode toont de lijst van Klant-objecten met hun details.
     private void toonKlantenlijst() {
         if (klanten.isEmpty()) {
             System.out.println("Er zijn geen klanten in de lijst.");
@@ -64,30 +65,3 @@ public class Menu {
     }
 
 }
-
-
-
-
-/*
-        if (keuze == 1) {
-        Klant klant = gebruikerInvoer.verzamelKlantgegevens();
-        klanten.add(klant);
-    } else if (keuze == 2) {
-        Klant klant = kiesKlant();
-        if (klant != null) {
-            VerzendEtiket etiket = new VerzendEtiket(klant.getAdres());
-            System.out.println("\nHet gegenereerde verzendetiket is:");
-            System.out.println(etiket.genereerEtiket());
-        }
-    } else if (keuze == 3) {
-        double verzendkosten = gebruikerInvoer.berekenVerzendkosten();
-        System.out.printf("De verzendkosten zijn: €%.2f\n", verzendkosten);
-    } else if (keuze == 4) {
-        toonKlantenlijst();
-    } else if (keuze == 5) {
-        System.out.println("Bedankt voor het gebruiken van onze applicatie. Tot ziens!");
-    } else {
-        System.out.println("Ongeldige invoer. Probeer het opnieuw.");
-    }
-}
-    }*/

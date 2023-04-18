@@ -10,9 +10,9 @@ public class GebruikerInvoer {
     public GebruikerInvoer() {
         this.input = new Scanner(System.in);
     }
-    public Scanner getInput() {
-        return input;
-    }
+
+    // Deze methode toont het hoofdmenu en retourneert
+    // de keuze van de gebruiker als een geheel getal.
     public int toonMenu() {
         Scanner scanner = new Scanner(System.in);
         int keuze;
@@ -41,6 +41,9 @@ public class GebruikerInvoer {
         }
         return keuze;
     }
+    // Deze methode laat de gebruiker een klant uit de gegeven
+    // klantenlijst kiezen en retourneert het gekozen Klant object.
+
     public Klant kiesKlant(ArrayList<Klant> klanten) {
         if (klanten.isEmpty()) {
             System.out.println("Er zijn geen klanten in de lijst. Voeg eerst een klant toe.");
@@ -68,6 +71,8 @@ public class GebruikerInvoer {
         return klanten.get(klantIndex);
     }
 
+    // Deze methode verzamelt de gegevens van een
+    // nieuwe klant en retourneert een nieuw Klant object.
     public Klant verzamelKlantgegevens() {
         String naam = getValidInput("Voer uw naam in: ");
         String email = getValidInput("Voer uw e-mailadres in: ");
@@ -77,6 +82,8 @@ public class GebruikerInvoer {
         return new Klant(adres, naam, email, telefoonnummer);
     }
 
+    // Deze methode vraagt om een geldige invoer
+    // van de gebruiker en retourneert de ingevoerde tekst.
     public String getValidInput(String prompt) {
         String input;
         do {
@@ -88,6 +95,8 @@ public class GebruikerInvoer {
         } while (input.trim().isEmpty());
         return input;
     }
+    // Deze methode vraagt om een adreskeuze en
+    // retourneert de gekozen optie als een geheel getal.
     public int getAdresKeuze() {
         int keuze;
         while (true) {
@@ -108,7 +117,8 @@ public class GebruikerInvoer {
         }
     }
 
-
+    // Deze methode verzamelt adresgegevens
+    // en retourneert een nieuw Adres object.
     public Adres verzamelAdresgegevens() {
         int keuze = getAdresKeuze();
 
@@ -129,6 +139,8 @@ public class GebruikerInvoer {
         System.out.println(adres.getAdres());
         return adres;
     }
+    // Deze methode vraagt om het gewicht van een pakket
+    // en retourneert het ingevoerde gewicht als een double.
 
     public double getGewicht() {
         double gewicht;
@@ -144,6 +156,9 @@ public class GebruikerInvoer {
 
         return gewicht;
     }
+
+    // Deze methode vraagt om de bestemming van een pakket
+    // en retourneert de gekozen optie als een geheel getal.
 
     public int getBestemming() {
         int bestemming;
@@ -163,18 +178,24 @@ public class GebruikerInvoer {
         }
     }
 
-
+    // Deze methode vraagt of de gebruiker een verzekering wil toevoegen
+    // en retourneert een boolean waarde.
     public boolean getVerzekering() {
         System.out.println("Wilt u een verzekering toevoegen? (ja/nee)");
         String verzekering = input.next();
         return verzekering.equalsIgnoreCase("ja");
     }
 
+    // Deze methode vraagt of de gebruiker een spoed verzekering wil toevoegen
+    // en retourneert een boolean waarde.
     public boolean getSpoedverzending() {
         System.out.println("Wilt u spoedverzending toevoegen? (ja/nee)");
         String spoedverzending = input.next();
         return spoedverzending.equalsIgnoreCase("ja");
     }
+
+    // Deze methode berekent de verzendkosten op basis van de ingevoerde
+    // gegevens en retourneert de berekende kosten als een double.
     public double berekenVerzendkosten() {
         double gewicht = getGewicht();
         int bestemming = getBestemming();
@@ -186,9 +207,4 @@ public class GebruikerInvoer {
 
         return verzendkosten;
     }
-
-
-
-
-
 }
