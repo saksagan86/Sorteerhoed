@@ -41,7 +41,6 @@ public class Menu {
         System.out.println("Bedankt voor het gebruiken van Sorteerhoed");
     }
 
-    // De toonKlantenlijst-methode toont de lijst van Klant-objecten met hun details.
     private void toonKlantenlijst() {
         if (klanten.isEmpty()) {
             System.out.println("Er zijn geen klanten in de lijst.");

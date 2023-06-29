@@ -36,10 +36,6 @@ public class ToonMenu extends UserInteractionTemplate {
         System.out.println("Ongeldige invoer, probeer opnieuw!");
     }
 
-    @Override
-    protected void performAction() {
-        // You can implement the action here
-    }
 
     public int getKeuze() {
         return keuze;

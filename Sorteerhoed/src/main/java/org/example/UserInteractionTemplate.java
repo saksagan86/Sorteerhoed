@@ -12,12 +12,10 @@ public abstract class UserInteractionTemplate {
                 printErrorMessage();
             }
         } while (!isValid);
-        performAction();
     }
 
     protected abstract void printMessage();
     protected abstract String getUserInput();
     protected abstract boolean validateInput(String input);
     protected abstract void printErrorMessage();
-    protected abstract void performAction();
 }

@@ -150,13 +150,3 @@ public class GebruikerInvoer {
     }
 }
 
-//int i = 0;: The loop counter i is initialized to 0.
-// This represents the starting index of the klanten list,
-// which is an ArrayList of Klant objects.
-
-//i < klanten.size();: The loop will continue as long as
-// i is less than the size of the klanten list.
-// This ensures that every customer in the list is considered during the iteration.
-
-
-//2    //subtracts 1 to obtain the actual index in the klanten list:
