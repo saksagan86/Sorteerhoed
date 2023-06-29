@@ -12,8 +12,9 @@ public abstract class Adres {
         this.stad = stad;
     }
 
-    public abstract String getAdres();
-
+    public String getAdres() {
+        return straat + " " + huisnummer + ", " + postcode + " " + stad;
+    }
     public String getPostcode() {
         return postcode;
     }

@@ -6,6 +6,8 @@ public class Klant {
     private String email;
     private String telefoonnummer;
     private int klantnummer;
+    //voor elke object die aangemaakt gaat 1 omhoog
+    //verboonden aan class
     private static int klantTeller = 0;
     public Klant(Adres adres, String naam, String email, String telefoonnummer) {
         this.adres = adres;

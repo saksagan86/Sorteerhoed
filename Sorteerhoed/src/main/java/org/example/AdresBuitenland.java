@@ -10,7 +10,7 @@ public class AdresBuitenland extends Adres {
 
     @Override
     public String getAdres() {
-        return straat + " " + huisnummer + ", " + postcode + " " + stad + ", " + land;
+        return super.getAdres() + ", " + getLand();
     }
 
     @Override

@@ -12,8 +12,6 @@ public class Menu {
         this.gebruikerInvoer = gebruikerInvoer;
         this.klanten = new ArrayList<>();
     }
-    // De start-methode voert de hoofdlus voor het menu uit
-    // waardoor gebruikers verschillende opties kunnen kiezen en acties kunnen uitvoeren.
 
     public void start() {
         int menuOptie;
@@ -26,22 +24,19 @@ public class Menu {
             if (menuOptie == 2) {
                 Klant klant = gebruikerInvoer.kiesKlant(klanten);
                 if (klant != null) {
-                    VerzendEtiket etiket = new VerzendEtiket(klant.getAdres());
+                    VerzendEtiket etiket = new VerzendEtiket(klant.getAdres()
+                    );
                     System.out.println("\nHet gegenereerde verzendetiket is:");
                     System.out.println(etiket.genereerEtiket());
                 }
             }
-
             if (menuOptie == 3) {
                 double verzendkosten = gebruikerInvoer.berekenVerzendkosten();
                 System.out.printf("De verzendkosten zijn: €%.2f\n", verzendkosten);
-
             }
             if (menuOptie == 4) {
                 toonKlantenlijst();
-
             }
-
         } while (menuOptie != 5);
         System.out.println("Bedankt voor het gebruiken van Sorteerhoed");
     }

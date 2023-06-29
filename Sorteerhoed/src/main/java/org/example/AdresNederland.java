@@ -8,7 +8,7 @@ public class AdresNederland extends Adres {
 
     @Override
     public String getAdres() {
-        return straat + " " + huisnummer + ", " + postcode + " " + stad + ", Nederland";
+        return super.getAdres() + ", " + "Nederland";
     }
 
     @Override
